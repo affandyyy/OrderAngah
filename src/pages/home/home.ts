@@ -102,13 +102,13 @@ export class HomePage {
       ],
       buttons: [
         {
-          text: 'Cancel',
+          text: 'Batal',
           handler: data => {
             console.log('Cancel clicked');
           }
         },
         {
-          text: 'Save',
+          text: 'Hantar',
           handler: data => {
             this.Menu.update(songId, {
               title: data.title,
