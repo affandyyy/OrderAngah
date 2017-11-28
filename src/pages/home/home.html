@@ -1,17 +1,56 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Menu Esok</ion-title>
   </ion-navbar>
 </ion-header>
 
+
+
+<!-- <ion-content padding>
+
+
+  <p>Klik
+    <b>+</b> untuk menambah order</p>
+
+  <form (ngSubmit)="doConfirm()">
+    <ion-card *ngFor="let m of menu | async; let i = index">
+
+      <ion-card-header>
+        {{m.data.title}}
+      </ion-card-header>
+
+
+      <ion-card-content>
+        RM {{m.data.harga}}
+        <ion-item>
+          <ion-input (ngModel)="kuantiti" type="text" placeholder="Masukkan kuantiti"></ion-input>
+        </ion-item>
+      </ion-card-content>
+
+    </ion-card>
+    <!-- Button order -->
+    <!-- <button ion-button block type="submit">Hantar Order</button>
+  </form>
+
+</ion-content> --> -->
+
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
-</ion-content>
+  
+  
+  
+      <ion-card *ngFor="let m of menu | async" (click)="showOptions(m.id, m.data.title, m.data.harga)">
+          
+          <ion-card-header>
+              {{m.data.title}}
+              
+          </ion-card-header>
+          <ion-card-content>
+              RM {{m.data.harga}}
+          </ion-card-content>
+        </ion-card>
+  
+      <!-- *ngFor="let song of songs | async" (click)="showOptions(song.id, song.data.title)">
+      {{song.data.title}} -->
+  
+  </ion-content>
+
