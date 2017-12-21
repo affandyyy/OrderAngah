@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+
+
 // Every pages declare here
 import { ListOrderPage } from '../pages/listorder/listorder';
 import { ContactPage } from '../pages/contact/contact';

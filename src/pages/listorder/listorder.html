@@ -8,16 +8,9 @@
 
 <ion-content padding>
   
-  <ion-card>
-    <ion-card-header>
-      Baguette Sandwich
-    </ion-card-header>
-
-
-    <ion-card-content>
-    </ion-card-content>
-  </ion-card>
-
-
+  <div class="map" [class.hidemap]="!((switch == 'map') || error)">
+    <ion-searchbar #searchbar placeholder="Cari" [hidden]="!search"></ion-searchbar>
+    <div id="map" #map></div>
+  </div>
 
 </ion-content>

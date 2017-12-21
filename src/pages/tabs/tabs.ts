@@ -16,7 +16,6 @@ export class TabsPage {
 
   tab1Root = HomePage;
   tab2Root = ListOrderPage;
-  tab3Root = ContactPage;
 
   constructor(private afAuth: AngularFireAuth , private toast: ToastController,
   public navCtrl: NavController, public navParams: NavParams) {
@@ -28,7 +27,7 @@ export class TabsPage {
     this.afAuth.authState.subscribe(data => {
       if(data.email){
       this.toast.create({
-        message: 'Berjaya',
+        message: 'Logged In',
         duration: 3000
       }).present()
     }

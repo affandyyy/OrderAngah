@@ -56,8 +56,8 @@ export class AdminPanelPage {
           placeholder: 'Harga'
         },
         {
-          name: 'kuantiti',
-          placeholder: '0'
+          name: 'imageUrl',
+          placeholder: 'Image URL'
         },
       ],
       buttons: [
@@ -73,7 +73,7 @@ export class AdminPanelPage {
             this.Menu.push({
               title: data.title,
               harga: data.harga,
-              kuantiti: data.kuantiti,
+              imageUrl: data.imageUrl,
             });
           }
         }
@@ -84,8 +84,8 @@ export class AdminPanelPage {
 
 
 
-  showOptions(songId, songTitle, songHarga, songKuantiti) {
-    console.log(songId, songTitle, songHarga, songKuantiti);
+  showOptions(songId, songTitle, songHarga, imageUrl) {
+    console.log(songId, songTitle, songHarga, imageUrl);
 
     let actionSheet = this.actionSheetCtrl.create({
       title: 'Edit Menu ?',
@@ -99,7 +99,7 @@ export class AdminPanelPage {
         }, {
           text: 'Kemaskini Menu',
           handler: () => {
-            this.updateSong(songId, songTitle, songHarga, songKuantiti);
+            this.updateSong(songId, songTitle, songHarga, imageUrl);
           }
         }, {
           text: 'Batal',
@@ -118,7 +118,7 @@ export class AdminPanelPage {
     this.Menu.remove(menuId);
   }
 
-  updateSong(songId, songTitle, songHarga, songKuantiti){
+  updateSong(songId, songTitle, songHarga, imageUrl) {
     let prompt = this.alertCtrl.create({
       title: 'Song Name',
       message: "Update the name for this song",
@@ -136,7 +136,7 @@ export class AdminPanelPage {
         {
           name: 'kuantiti',
           placeholder: 'Kuantiti',
-          value: songKuantiti
+          value: imageUrl
         },
       ],
       buttons: [
@@ -152,12 +152,12 @@ export class AdminPanelPage {
             this.Menu.update(songId, {
               title: data.title,
               harga: data.harga,
-              kuantiti: data.kuantiti
+              imageUrl: data.imageUrl
             });
           }
         }
       ]
-      
+
     });
     prompt.present();
   }

@@ -2,7 +2,7 @@
 import { Component } from '@angular/core';
 import { AlertController, App, LoadingController, NavController } from 'ionic-angular';
 
-import { User } from '../models/user'
+import { User } from '../../model/user'
 import { AngularFireAuth } from 'angularfire2/auth';
 import { TabsPage } from '../tabs/tabs';
 import { AdminPanelPage } from '../admin-panel/admin-panel';
@@ -47,9 +47,6 @@ export class MainLoginPage {
 
 
   // }
-
-
-
 
   async login(user: User) {
     try {

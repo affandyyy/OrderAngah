@@ -1,10 +1,15 @@
-page-home {
-    
+page-home{
 
-}
+    background-color: #000000;
 
 
 ion-buttons button[icon-only].my-style-for-modal {
     margin: 0 6px;
     min-width: 36px;
  }
+
+ ion-card{
+     border-radius: 40px;
+ }
+
+}
